@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   # resources :pets
   resources :users
-  get '/pet' => "pets#show"
+
+  root "pets#show"
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
