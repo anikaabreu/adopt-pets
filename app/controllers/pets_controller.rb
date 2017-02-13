@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: [:show, :edit, :update, :destroy]
+  before_action :set_pet, only: [:edit, :update, :destroy]
 
   # GET /pets
   # GET /pets.json
@@ -10,7 +10,7 @@ class PetsController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
   def show
-    @pet = PetCall.new
+    @pet = Pet.random
   end
 
   # GET /pets/new
