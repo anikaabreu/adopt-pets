@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :pets
+  belongs_to :favorite
   has_secure_password
 end
