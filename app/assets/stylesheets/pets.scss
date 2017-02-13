@@ -1,3 +1,312 @@
 // Place all the styles related to the Pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**RESETS**/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
+
+
+body {
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+}
+
+
+/**MODAL**/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #AACD6E;
+    color: #AACD6E;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #AACD6E;
+    color: #AACD6E;
+    box-shadow:
+  }
+/* Modal Content/Box */
+.modal-content {
+    font-family: 'Lota';
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/**HEADER**/
+
+.header {
+  padding-top: 90px;
+  height: auto;
+}
+
+ .headerbox {
+   height:80px;
+   text-align: left;
+   background-color: white;
+   border: 2px 2px 2px 2px;
+   border-style: solid;
+   box-shadow: 10px 10px 10px #888888;
+   margin: 0 auto;
+   padding: 0;
+ }
+
+.angry_dog {
+  height: 190px;
+  width: 240px;
+  float: right;
+}
+
+#w_name {
+  font-family: 'Satisfy';
+  font-size: 6em;
+  color: black;
+  text-shadow: 3px 3px #BC8D7E;
+  height: 80%;
+  width: 80%;
+  padding-left: 20px;
+  padding-top: 30px;
+  background-image: url('file:///Users/mikosflower/Documents/wyncode/frifam/peachpaw2.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: left;
+}
+
+#description {
+  font-family: 'Lato';
+  font-size: 20px;
+  text-shadow: none;
+}
+
+#animate_new {
+  animation:
+  pulse
+  5s
+  ease-out
+  infinite
+  running;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #FEB159;
+  }
+  50% {
+    color: #F67F17;
+  }
+}
+
+
+/**BODY**/
+
+.container {
+  display: flex;
+  width: 75%;
+  margin-top: 190px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+  top: 20px;
+}
+
+.description {
+  font-family: 'Lato', sans-serif;
+  display: inline-flex;
+  /*text-align: center;*/
+  font-size: 20px;
+  padding: 20px;
+}
+
+
+.carousel {
+  position: relative;
+  top: 20px;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  border-style: solid;
+  border: 2px 2px ;
+  box-shadow: 1px 4px 4px 4px #888888;
+  border-color: grey;
+  height: auto;
+  background-color: #AACD6E;
+}
+
+.navbar {
+
+  background-color: #3C3530;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  display:inline-flex;
+  box-shadow: 1px 2px 2px 2px #888888;
+}
+
+.img_center {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.likebuttons {
+  background-color: white;
+  position: relative;
+  text-align: center;
+  top: 60px;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding: 0;
+  border: 2px;
+  border-top: 0;
+  border-style: solid;
+  border-color: grey;
+
+}
+
+
+.like {
+  position: relative;
+  right: 130px;
+  display: inline-flex;
+  height: 180px;
+  width: 110px;*/
+
+}
+
+.dislike {
+  margin: 0;
+  display: inline-flex;
+  height: 190px;
+  width: 110px;
+}
+/**FOOTER**/
+
+ footer {
+   color: grey;
+ }
+
+}
+
+
+
+/**MOBILE**/
+/*@media only screen and (min-width: 500px)
+{*/
+/*
+header {
+  height:140px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255,	255, 0.75);
+}
+
+
+.container {
+  display: flex;
+  width: 85%;*/
+  /*margin-top: 190px;
+  flex-direction: column;
+  justify-content: space-around;
+  /*height: 900px;*/
+  /*margin: 0 auto;
+  padding-top: 50px;*/
+  /*background-color: #BC8D7E;*/
+
+/*}
+
+.w_name {
+  font-family: 'Satisfy';
+  font-size: 4em;
+  /*color: rgba(255, 255,	255, 0.75);*/
+  /*color: black;
+  text-shadow: 2px 2px #BC8D7E;
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;/*/
+  /*display: inline-flex;*/
+  /*flex-direction: column;*/
+
+/*}*/
+
+/*.carousel {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+  height: auto;
+  width: 112.5%;
+
+}*/
+
+/*.likebuttons {
+flex-direction: column;
+color: #FE5D26;
+text-shadow: black;
+font-size: 3em;
+position: relative;
+text-align: center;
+/*left: 75px;*/
+/*top: 50px;
+/*}*/
+
+/*
+.like {
+
+height: 130px;
+width: 110px;
+
+}*/
+/*
+.dislike {
+height: 150px;
+width: 120px;
+
+}*/
+
+/**FOOTER**/
+
+/*.navbar {
+width: 100%;
+height: 80%;
+flex-wrap: wrap;*/
+
+/*}
+}*/
