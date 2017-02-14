@@ -1,52 +1,45 @@
 
 class PetCall
-  attr_reader :pets, :random_pet
+  attr_reader :pets, :random_pet, :name, :image, :description, :sex, :age, :breed, :size
 
-  def initialize
-    url = "http://api.petfinder.com/shelter.getPets?key=b1f6d031483e188e4aa40fe8f98aa1bd&id=FL252&count=500"
+  def self.call(opts)
+    url = "http://api.petfinder.com/shelter.getPets?key=b1f6d031483e188e4aa40fe8f98aa1bd&count=500"
+    location = "&id=#{self.location_id[opts[:location]]}"
+    url << location
     response = HTTParty.get(url)
-    @pets = response["petfinder"]["pets"]["pet"]
+    response["petfinder"]["pets"]["pet"].map do |pet|
+      new(pet)
+    end
   end
 
-  # def get_random_pet
-  #   @random_pet = @pets.shuffle.pop
-  #   @random_pet
-  # end
+  def initialize(pet)
+    @name = pet["name"]
+    @image = pet["media"]["photos"]["photo"][2]["__content__"]
+    @description = pet["description"]
+    @sex = pet["sex"]
+    @age = pet["age"]
+    @breed = pet["breeds"]["breed"]
+    @size = pet["size"]
 
-  def image
-    images = @random_pet["media"]["photos"]["photo"]
-    pet_image = images[2]["__content__"]
-    pet_image
+    self.save
   end
 
-  def name
-    pet_name = @random_pet["name"]
-    pet_name
+  def save
+    Pet.find_or_create_by(self.instance_values)
   end
 
-  def description
-    description = @random_pet["description"]
-    description
+  def self.location_id
+    {
+      "Broward" => 'FL252',
+      "Chicago" => 'CHI313'
+    }
   end
 
-  def sex
-    sex = @random_pet["sex"]
-    sex
-  end
-
-  def age
-    age = @random_pet["age"]
-    age
-  end
-
-  def breed
-    breeds = @random_pet["breeds"]
-    breed = breeds["breed"]
-    breed
-  end
-
-  def size
-    size = @random_pet["size"]
-    size
+  def self.random(opts)
+    url = "http://api.petfinder.com/shelter.getPets?key=b1f6d031483e188e4aa40fe8f98aa1bd&count=500"
+    location = "&id=#{self.location_id[opts[:location]]}"
+    url << location
+    response = HTTParty.get(url)
+    new(response["petfinder"]["pets"]["pet"].shuffle.pop)
   end
 end

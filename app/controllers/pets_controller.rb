@@ -4,13 +4,14 @@ class PetsController < ApplicationController
   # GET /pets
   # GET /pets.json
   def index
-    @pets = Pet.all
+    # @pets = Pet.all
+    @pets = PetCall.call({location: 'Broward'})
   end
 
   # GET /pets/1
   # GET /pets/1.json
   def show
-    @pet = Pet.random
+    @pet = PetCall.random({location: 'Broward'})
   end
 
   # GET /pets/new
@@ -25,7 +26,7 @@ class PetsController < ApplicationController
   # POST /pets
   # POST /pets.json
   def create
-    @pet = Pet.new(pet_params)
+    @pet = Pet.new( pet_params)
 
     respond_to do |format|
       if @pet.save

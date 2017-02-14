@@ -47,10 +47,12 @@
 
     <!-- LIKE/DISLIKE/////////// -->
       <div class= "likebuttons">
-          <div class="like"><img src="file:///Users/mikosflower/Documents/wyncode/frifam/likedog.jpg" alt="Like">&nbsp;&nbsp;&nbsp;</div>
-
-          <div class="dislike"><img src="file:///Users/mikosflower/Documents/wyncode/frifam/dislikecat.jpg" alt="Dislike">
-          </div>
+        <div class="like">
+          <%= link_to image_tag('likedog.jpg', :alt => 'Like'), favorite_pet_path(Pet.find_by_image(@pet.image).id), :method => :post, data: { confirm: 'Pet has been added to your Favorites!' }%>
+        </div>
+        <div class="dislike">
+            <%= link_to image_tag('dislikecat.jpg', :alt => "Dislike")%>
+        </div>
       </div>
 
     <!-- FOOTER////////// -->

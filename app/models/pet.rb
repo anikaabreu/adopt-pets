@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-  belongs_to :favorite
+has_many :favorites
 
   def self.random
     all.shuffle.pop
