@@ -1,0 +1,8 @@
+partials start with an underscore- users_list.html
+
+can make a file that starts with underscore and can render code in both places - can define reusable pieces of sites : _users_find.html.erb
+can share partials within folders- <%= render 'users_list' %>
+
+let you customize the html elements i.e <user></user> instead of <div class="user"></div>
+use web components that have been prerendered to use the web components features
+polymer also

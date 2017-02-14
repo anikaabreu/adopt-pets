@@ -1,10 +1,10 @@
 <!-- MODAL /////////// -->
-  <a id="demo01" href="#animatedModal"></a>
+ <a id="demo01" href="#animatedModal"></a>
   <div id="animatedModal">
 
     <div id="closebt-container" class="close-animatedModal">
       <div class='close-btn-container'>
-        <img class="closebt" src="closebt.svg">
+        <%= image_tag('closebt.svg', :alt => 'Close', :class => 'closebt') %>
       </div>
     </div>
 
@@ -21,21 +21,48 @@
     </div>
   </div>
 <!-- HEADER/////////// -->
-<div class="carousel">
+<!-- <div class="carousel">
   <%= image_tag(@pet.image) %>
+</div> -->
+<!-- HEADER/////////// -->
+
+    <div class="container">
+      <div class= "header">
+        <nav id="nav-main">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Favorites</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Shelter</a></li>
+    </ul>
+</nav>
+<div id="nav-trigger">
+    <span>Menu</span>
 </div>
+<nav id="nav-mobile"></nav>
+    </div>
+
+<!-- CAROUSEL/DESCRIPTION////////// -->
+         <div class="headerbox" id="w_name">
+          <span id="adanim">adopt</span><span id="apanim">Petz</span>
+        </div>
+        <div class="carousel">
+        <%= image_tag(@pet.image) %>
+      </div>
+    </div>
+
     <!-- LIKE/DISLIKE/////////// -->
-      <div class= "likebuttons">
+       <div class= "likebuttons">
         <div class="like">
-          <%= link_to image_tag('likedog.jpg', :alt => 'Like'), favorite_pet_path(Pet.find_by_image(@pet.image).id), :method => :post, data: { confirm: 'Pet has been added to your Favorites!' }%>
+          <%= link_to image_tag('likedogNoBG2.png', :alt => 'Like'), favorite_pet_path(Pet.find_by_image(@pet.image).id), :method => :post, data: { confirm: 'Pet has been added to your Favorites!' }%>
         </div>
         <div class="dislike">
-            <%= link_to image_tag('dislikecat.jpg', :alt => "Dislike")%>
+            <%= link_to image_tag('dislikecatNoBG2.png', :alt => "Dislike")%>
         </div>
       </div>
 
 <!-- FOOTER////////// -->
-    <div class="pet_info">
+     <div class="pet_info">
         <ul>
          <li><strong>Name:</strong> <%= @pet.name %></li>
           <li><strong>Breed:</strong> <%= @pet.breed %></li>
