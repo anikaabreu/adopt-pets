@@ -11,6 +11,13 @@ class FavoritesController < ApplicationController
   end
 
   def index
-    @favorites = current_user.favorites
+
+    if session[:user_id].nil?
+      redirect_to '/signup'
+    else
+      user = User.find(session[:user_id])
+      @favorites = user.favorites
+    end
+
   end
 end
