@@ -18,7 +18,11 @@ class PetCall
     @description = pet["description"]
     @sex = pet["sex"]
     @age = pet["age"]
-    @breed = pet["breeds"]["breed"]
+    begin
+      @breed = pet["breeds"]["breed"].join(' ')
+    rescue NoMethodError
+      @breed = pet["breeds"]["breed"]
+    end
     @size = pet["size"]
 
     self.save

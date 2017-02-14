@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # gem 'pg'
+gem 'haml'
 gem 'bcrypt'
 gem 'pry-rails'
 gem 'pry'
