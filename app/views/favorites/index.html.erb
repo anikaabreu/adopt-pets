@@ -1,4 +1,8 @@
 <% @favorites.each do |fav| %>
-<%=image_tag(fav.pet.image) %>
-<%=fav.pet.name%><br>
+  <div class="fav-pet">
+    <figure>
+      <%=image_tag(fav.pet.image) %>
+      <figcaption><%=fav.pet.name%></figcaption>
+    </figure>
+  </div>
 <% end %>

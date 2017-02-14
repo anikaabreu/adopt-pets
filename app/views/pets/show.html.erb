@@ -21,31 +21,9 @@
     </div>
   </div>
 <!-- HEADER/////////// -->
-
-    <div class="container">
-      <div class= "header">
-        <nav id="nav-main">
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Favorites</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Shelter</a></li>
-    </ul>
-</nav>
-<div id="nav-trigger">
-    <span>Menu</span>
+<div class="carousel">
+  <%= image_tag(@pet.image) %>
 </div>
-<nav id="nav-mobile"></nav>
-    </div>
-
-<!-- CAROUSEL/DESCRIPTION////////// -->
-        <div class="headerbox" id="w_name">
-          <span id="adanim">adopt</span><span id="apanim">Petz</span>
-        </div>
-        <div class="carousel">
-        <img class="img_center" src="http://lorempixel.com/500/352/cats/Dummy-Text" alt=""></div>
-      </div>
-
     <!-- LIKE/DISLIKE/////////// -->
       <div class= "likebuttons">
         <div class="like">
@@ -59,46 +37,13 @@
 <!-- FOOTER////////// -->
     <div class="pet_info">
         <ul>
-         <li>Lorem ipsum dolor sit amet,  consectetuer adipiscing elit.
-          <li>Aliquam tincidunt mauris eu risus.</li>
-          <li>Vestibulum auctor dapibus neque.</li>
-          <li>Cras ornare tristique elit.</li>
+         <li><strong>Name:</strong> <%= @pet.name %></li>
+          <li><strong>Breed:</strong> <%= @pet.breed %></li>
+          <li><strong>Sex:</strong> <%= @pet.sex %></li>
+          <li><strong>Age:</strong> <%= @pet.age %></li>
+          <li><strong>Size:</strong> <%= @pet.size %></li>
+          <li><strong>Description:</strong> <%= @pet.description %></li>
         </ul>
     </div>
 
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @pet.name %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @pet.image %>
-</p>
-
-<p>
-  <strong>Breed:</strong>
-  <%= @pet.breed %>
-</p>
-
-<p>
-  <strong>Sex:</strong>
-  <%= @pet.sex %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @pet.age %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @pet.size %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @pet.description %>
-</p>

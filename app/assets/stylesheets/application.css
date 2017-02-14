@@ -17,3 +17,13 @@
 ul{
   list-style: none;
 }
+
+div.fav-pet {
+  display: inline-block;
+  flex-direction: row;
+  width: 400px;
+}
+
+.fav-pet img {
+  max-height: 200px;
+}
