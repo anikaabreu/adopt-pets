@@ -79,6 +79,10 @@ html, body {
 
 }
 
+#petid {
+  display: none;
+}
+
 .like:hover {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 900ms;

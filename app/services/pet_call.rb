@@ -24,8 +24,7 @@ class PetCall
       @breed = pet["breeds"]["breed"]
     end
     @size = pet["size"]
-
-    self.save
+    save
   end
 
   def save

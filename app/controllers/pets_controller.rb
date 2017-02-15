@@ -8,10 +8,14 @@ class PetsController < ApplicationController
     @pets = PetCall.call({location: 'Broward'})
   end
 
+  def random
+    render json: Pet.random
+  end
   # GET /pets/1
   # GET /pets/1.json
   def show
-    @pet = PetCall.random({location: 'Broward'})
+    # @pet = PetCall.random({location: 'Broward'})
+    @pet = Pet.random
   end
 
   # GET /pets/new

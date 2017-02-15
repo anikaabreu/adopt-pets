@@ -30,10 +30,9 @@
       <div class= "header">
         <nav id="nav-main">
     <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Favorites</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Shelter</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Favorites", favorites_path%></li>
+        <li><%= link_to "Sign Up", signup_path%></li>
     </ul>
 </nav>
 <div id="nav-trigger">
@@ -47,29 +46,56 @@
           <span id="adanim">adopt</span><span id="apanim">Petz</span>
         </div>
         <div class="carousel">
-        <%= image_tag(@pet.image) %>
-      </div>
+          <%= image_tag(@pet.image, :id => "petimage") %>
+        </div>
     </div>
 
     <!-- LIKE/DISLIKE/////////// -->
        <div class= "likebuttons">
         <div class="like">
-          <%= link_to image_tag('likedogNoBG2.png', :alt => 'Like'), favorite_pet_path(Pet.find_by_image(@pet.image).id), :method => :post, data: { confirm: 'Pet has been added to your Favorites!' }%>
+          <div id="likedog">
+            <%= image_tag('likedogNoBG2.png', :alt => "like") %>
+            <div id="petid"><%= @pet.id %></div>
+          </div>
         </div>
         <div class="dislike">
-            <%= link_to image_tag('dislikecatNoBG2.png', :alt => "Dislike")%>
+          <div id="dislikecat">
+            <%= image_tag('dislikecatNoBG2.png', :alt => "dislike") %>
+          </div>
         </div>
       </div>
 
 <!-- FOOTER////////// -->
      <div class="pet_info">
         <ul>
-         <li><strong>Name:</strong> <%= @pet.name %></li>
-          <li><strong>Breed:</strong> <%= @pet.breed %></li>
-          <li><strong>Sex:</strong> <%= @pet.sex %></li>
-          <li><strong>Age:</strong> <%= @pet.age %></li>
-          <li><strong>Size:</strong> <%= @pet.size %></li>
-          <li><strong>Description:</strong> <%= @pet.description %></li>
+         <li><strong>Name:</strong>
+           <div id="petname"><%= @pet.name %></div>
+         </li>
+          <li><strong>Breed:</strong>
+            <div id="petbreed">
+              <%= @pet.breed %>
+            </div>
+          </li>
+          <li><strong>Sex:</strong>
+            <div id="petsex">
+              <%= @pet.sex %>
+            </div>
+          </li>
+          <li><strong>Age:</strong>
+            <div id="petage">
+              <%= @pet.age %>
+            </div>
+          </li>
+          <li><strong>Size:</strong>
+            <div id="petsize">
+              <%= @pet.size %>
+            </div>
+          </li>
+          <li><strong>Description:</strong>
+            <div id="petdescript">
+              <%= @pet.description %>
+            </div>
+          </li>
         </ul>
     </div>
 

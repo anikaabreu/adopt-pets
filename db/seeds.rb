@@ -5,14 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-PetCall.new.pets.each_with_index do |pet, index|
-  if !pet["media"].nil?
-    Pet.create(name: pet["name"],
-              image: pet["media"]["photos"]["photo"][2]["__content__"],
-              description: pet["description"],
-              sex: pet["sex"],
-              age: pet["age"],
-              breed: pet["breeds"]["breed"],
-              size: pet["size"])
-  end
-end
+# PetCall.call({location: "Broward"}).pets.each_with_index do |pet, index|
+#   if !pet["media"].nil?
+#     Pet.create(name: pet["name"],
+#               image: pet["media"]["photos"]["photo"][2]["__content__"],
+#               description: pet["description"],
+#               sex: pet["sex"],
+#               age: pet["age"],
+#               breed: pet["breeds"]["breed"],
+#               size: pet["size"])
+#   end
+# end
+PetCall.call({location: "Broward"})
