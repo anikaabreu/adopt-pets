@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rails_12factor'
 gem 'pg'
 gem 'haml'
 gem 'bcrypt'
@@ -42,6 +43,10 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :development do
