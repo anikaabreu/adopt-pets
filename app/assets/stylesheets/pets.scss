@@ -227,6 +227,14 @@ li {
   list-style: none;
 }
 
+.animatedModal-off {
+  display: none;
+}
+
+.animatedModal-on {
+  display: inherit ;
+}
+
 #nav-trigger {
   display: none;
   text-align: center; }
