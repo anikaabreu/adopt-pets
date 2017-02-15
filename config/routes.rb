@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :pets
   resources :users
-
+  resources :favorites
+  
   root "pets#show"
   get '/randompet' => 'pets#random'
   get '/favoritepet/:pet_id' => 'favorites#like', as: 'favorite_pet'
