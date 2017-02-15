@@ -1,3 +1,116 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sign_up {
+
+  text-shadow: none;
+  color: white;
+  position: relative;
+  top: 90px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgba(	131, 209,	69, .5);
+  font-family: 'Lato', sans-serif;
+}
+
+#w_name {
+  position:relative;
+  top:40px;
+}
+
+
+#name {
+  text-decoration: none;
+}
+
+.login {
+  // background-color: rgba(	131, 209,	69, .7);
+  height: 200px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid white;
+    color: white;
+    width: 290px;
+    height: 40px;
+    font-size:10px;
+
+}
+
+input:focus{
+  outline:none;
+  border-bottom: solid 1px #969696;
+}
+
+#submit {
+  padding-top: 10px;
+  border: none;
+  box-shadow: 2px 3px 4px 3px #888888;
+  border-radius: 10%;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background-color: #FFA901;
+  margin-top: 1rem;
+  width: 22%;
+  text-align: center;
+  display: inline-flex;
+  margin-top: 20px;
+}
+
+#submit:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.name {
+  color: white;
+}
+
+input[type="submit"] {
+
+    border-bottom: none;
+}
+
+input::-webkit-input-placeholder {
+   color: white;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+input:-ms-input-placeholder {
+   color: white;
+}

@@ -1,4 +1,6 @@
 <div class="container">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <div class= "header">
     <nav id="nav-main">
 <ul>
@@ -19,14 +21,14 @@
       <span id="adanim">adopt</span><span id="apanim">Petz</span>
     </div>
 
-    <h1>Sign Up</h1>
+    <div class= "sign_up">
 
 <%= form_for :user, url: '/users' do |f| %>
-<ul>
-  <li>Name: <%= f.text_field :name %></li>
-  <li>Email: <%= f.text_field :email %></li>
-  <li>Password: <%= f.password_field :password %></li>
-  <li>Password Confirmation: <%= f.password_field :password_confirmation %></li>
-  <li><%= f.submit "Submit" %></li>
-</ul>
+<ul class="login">
+  <li class="name"><%= f.text_field :name, placeholder: "Name" %></li>
+  <li id="email"><%= f.text_field :email, placeholder: "Email" %></li>
+  <li id="pw"><%= f.password_field :password, placeholder: "Email" %></li>
+  <li id="conf"> <%= f.password_field :password_confirmation , placeholder: "Confirm" %></li>
+  <li id="submit"><%= f.submit "Register" %></li>
+</ul></div>
 <% end %>
