@@ -14,7 +14,7 @@ class PetCall
 
   def initialize(pet)
     @name = pet["name"]
-    @image = pet["media"]["photos"]["photo"][2]["__content__"]
+    @image = pet["media"]["photos"]["photo"][2]["__content__"] if pet["media"]
     @description = pet["description"]
     @sex = pet["sex"]
     @age = pet["age"]
