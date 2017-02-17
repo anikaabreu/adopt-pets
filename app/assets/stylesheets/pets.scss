@@ -58,11 +58,7 @@ html, body {
 
 img#petimage {
     border-radius: 30px;
-}
-
-.img_center {
-
-  box-shadow: 1px 1px 5px 13px white;
+    box-shadow: 1px 1px 5px 13px white;
 }
 
 
@@ -322,7 +318,8 @@ nav#nav-mobile {
 
 /* =Media Queries
 -------------------------------------------------------------- */
-@media all and (max-width: 900px) {
+// @media all and (max-width: 900px)
+ @media (max-width: 4s00px){
   #nav-trigger {
     display: block; }
 
@@ -331,14 +328,14 @@ nav#nav-mobile {
 
   nav#nav-mobile {
     display: block; }
-}
 
 
-@media (max-width: 1200px) {
-  .facet_sidebar {
-    display: none;
-  }
 
+// @media (max-width: 600px) {
+//   .facet_sidebar{
+//     display: none;
+//   }
+// }
 
 #w_name {
     font-size: 7em;
@@ -372,4 +369,5 @@ img#petimage {
     width: 50%;
     color: white;
     font-size: 30px;
+}
 }
