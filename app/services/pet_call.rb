@@ -3,7 +3,8 @@ class PetCall
   attr_reader :pets, :random_pet, :name, :image, :description, :sex, :age, :breed, :size
 
   def self.call(opts)
-    url = "http://api.petfinder.com/shelter.getPets?key=b1f6d031483e188e4aa40fe8f98aa1bd&count=500"
+    key = ENV['PET_KEY']
+    url = "http://api.petfinder.com/shelter.getPets?key=#{key}&count=500"
     location = "&id=#{self.location_id[opts[:location]]}"
     url << location
     response = HTTParty.get(url)
@@ -39,7 +40,8 @@ class PetCall
   end
 
   def self.random(opts)
-    url = "http://api.petfinder.com/shelter.getPets?key=b1f6d031483e188e4aa40fe8f98aa1bd&count=500"
+    key = ENV['PET_KEY']
+    url = "http://api.petfinder.com/shelter.getPets?key=#{key}&count=500"
     location = "&id=#{self.location_id[opts[:location]]}"
     url << location
     response = HTTParty.get(url)
