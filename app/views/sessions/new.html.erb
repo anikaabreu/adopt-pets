@@ -1,3 +1,23 @@
+<div class="container">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <div class= "header">
+    <nav id="nav-main">
+<ul>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Favorites", favorites_path%></li>
+  <li><%= link_to "Login", login_path%></li>
+  <li><%= link_to "Sign Up", signup_path%></li>
+</ul>
+</nav>
+<div id="nav-trigger">
+<span>Menu</span>
+</div>
+<nav id="nav-mobile"></nav>
+</div>
+
+<!-- CAROUSEL/DESCRIPTION////////// -->
+
 <h1>Login</h1>
 
 <%= form_tag '/login' do %>
