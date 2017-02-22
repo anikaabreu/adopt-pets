@@ -19,11 +19,14 @@
 <!-- CAROUSEL/DESCRIPTION////////// -->
 
 <h1>Login</h1>
-
+<div>
 <%= form_tag '/login' do %>
-
+  </div>
+  <div>
   Email: <%= text_field_tag :email %>
+  </div>
+  <div>
   Password: <%= password_field_tag :password %>
   <%= submit_tag "Submit" %>
-
+  </div>
 <% end %>
