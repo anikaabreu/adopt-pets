@@ -1,24 +1,20 @@
-# README
+# adoptPetz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web app that connects to the Broward County shelter database using an API call and allowes users to views pets Tinder-style, using like and dislike buttons. Liked pets can be added to a User's favorites page (favorites only viewable to a user who is signed in).
 
-Things you may want to cover:
+The website can be accessed [here](https://adoptpetz.herokuapp.com/).
 
-* Ruby version
+![adoptPetz website](https://puu.sh/uHuZk/ae5d8c2955.png "adoptPetz website")
 
-* System dependencies
 
-* Configuration
+#### Future plans:
 
-* Database creation
+* Allow users to insert their zip code and search different shelters in their area.
 
-* Database initialization
+* Email system for user confirmation, password recovery, and updates when a pet on a user's favorites is no longer available.
 
-* How to run the test suite
+* Update favorites page to have more information on each pet, including contact information for the shelter they're placed at. Also updated when a pet is no longer available.
 
-* Services (job queues, cache servers, search engines, etc.)
+* Rake tasks for removing pets that are no longer available
 
-* Deployment instructions
-
-* ...
+* Mobile app
